@@ -102,7 +102,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Deploy to Heroku
+      - name: Deploy to Railway
         if: ${{ github.event_name == 'push' }}
         uses: devtomio/action-railway@v1.1.4
         with:
