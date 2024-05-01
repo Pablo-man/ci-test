@@ -104,10 +104,6 @@ jobs:
           fetch-depth: 0
       - name: Deploy to Heroku
         if: ${{ github.event_name == 'push' }}
-        uses: akhileshns/heroku-deploy@v3.12.12
+        uses: devtomio/action-railway@v1.1.4
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP}}
-          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
-          healthcheck: "https://${{secrets.HEROKU_APP}}.herokuapp.com/health"
-          rollbackonhealthcheckfailed: true
+          railway_token: da0ef588-15c6-40d6-9077-046f7bd129ca
