@@ -107,5 +107,10 @@ jobs:
       - name: Deploy to Railway
         if: ${{ github.event_name == 'push' }}
         uses: devtomio/action-railway@v1.1.4
-        with:
-          railway_token: ${{env.token}}
+      - name: Install Railway CLI
+        run: |
+          npm install -g railway-cli
+      
+      - name: Login to Railway
+        run: |
+          railway login --token ${{env.token}}
