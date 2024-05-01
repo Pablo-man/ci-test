@@ -101,23 +101,17 @@ jobs:
     needs: [test, e2e]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: Deploy to Railway
         if: ${{ github.event_name == 'push' }}
         uses: devtomio/action-railway@v1.1.4
       - name: Install Railway CLI
-        run: |
-          npm i -g @railway/cli
+        run: npm i -g @railway/cli
       
       - name: Login to Railway
-        run: |
-          railway login --browserless
+        run: railway login --browserless
         env:
           RAILWAY_TOKEN: ${{secrets.RAILWAY_TOKEN}}
       - name: 
-        run: |
-          railway up
+        run: railway up
         env:
           RAILWAY_TOKEN: ${{secrets.RAILWAY_TOKEN}}
