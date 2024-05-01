@@ -36,10 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       token: ${{secrets.RAILWAY_TOKEN}}
-      tokenrail: ${{vars.TOKEN_RAIL}}
     steps:
-      - name: token
-        run: echo ${{env.tokenrail}}
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
@@ -116,4 +113,11 @@ jobs:
       
       - name: Login to Railway
         run: |
-          railway login --token ${{env.token}}
+          railway login --browserless
+        env:
+          RAILWAY_TOKEN: ${{secrets.RAILWAY_TOKEN}}
+      - name: 
+        run: |
+          railway up
+        env:
+          RAILWAY_TOKEN: ${{secrets.RAILWAY_TOKEN}}
