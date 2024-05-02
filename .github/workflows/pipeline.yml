@@ -103,6 +103,7 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         run: |
           npm i -g @railway/cli
+          railway login --browserles
           railway up
         env:
           railway_token: ${{ secrets.POKE }}
