@@ -101,6 +101,7 @@ jobs:
     steps:
       - name: Deploy to Railway
         if: ${{ github.event_name == 'push' }}
-        uses: devtomio/action-railway@v1.1.4
+        uses: bervProject/railway-deploy@main
         with:
           railway_token: ${{ secrets.POKE }}
+          service: "poke"
