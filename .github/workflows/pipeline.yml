@@ -101,7 +101,9 @@ jobs:
     steps:
       - name: Deploy to Railway
         if: ${{ github.event_name == 'push' }}
-        uses: bervProject/railway-deploy@main
-        with:
+        run: |
+          npm install -g railway
+          railway up
+        env:
           railway_token: ${{ secrets.POKE }}
           service: "poke"
