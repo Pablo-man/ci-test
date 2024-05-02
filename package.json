@@ -10,7 +10,8 @@
     "test": "jest",
     "eslint": "eslint .",
     "build": "webpack --mode production",
-    "test:e2e": "npx cypress run"
+    "test:e2e": "npx cypress run",
+    "yea": "serve dist -s -n -L -p 3000"
   },
   "repository": {
     "type": "git",
@@ -54,6 +55,7 @@
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "serve": "^14.2.3"
   }
 }
