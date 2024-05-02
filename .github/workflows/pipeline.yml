@@ -103,4 +103,4 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         uses: devtomio/action-railway@v1.1.4
         with:
-          railway_token: ${{ secrets.RAILWAY_TOKEN }}
+          railway_token: ${{ secrets.POKE }}
