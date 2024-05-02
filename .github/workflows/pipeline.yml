@@ -104,8 +104,3 @@ jobs:
         uses: devtomio/action-railway@v1.1.4
         with:
           railway_token: ${{ secrets.POKE }}
-      - name: Serve files
-        if: ${{ github.event_name == 'push' }}
-        run: |
-          npm install serve
-          npm run yea
