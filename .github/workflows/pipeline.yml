@@ -102,7 +102,7 @@ jobs:
       - name: Deploy to Railway
         if: ${{ github.event_name == 'push' }}
         run: |
-          npm install -g railway
+          npm i -g @railway/cli
           railway up
         env:
           railway_token: ${{ secrets.POKE }}
