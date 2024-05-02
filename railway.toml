@@ -1,0 +1,8 @@
+# railway.toml
+
+[[services]]
+  name = "myapp"
+  type = "web"
+  build = "npm install serve && npm run build"
+  start = "serve dist -s -n -L -p $PORT"
+  port = 3000

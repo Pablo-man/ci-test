@@ -1,7 +1,0 @@
-services:
-  myapp:
-    name: web
-    buildCommand: npm install serve && npm run build
-    runCommand: serve dist -s -n -L -p $PORT
-    env:
-      PORT: ${{ 3000 }}
