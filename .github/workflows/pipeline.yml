@@ -107,6 +107,5 @@ jobs:
       - name: Serve files
         if: ${{ github.event_name == 'push' }}
         run: |
-          railway link a6af24c1-c2ef-4033-8f9d-73b1ec1847f7
           npm install serve
           npm run yea
