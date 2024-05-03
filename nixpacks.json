@@ -1,0 +1,16 @@
+{
+    "services": [
+      {
+        "id": "frontend",
+        "name": "Frontend App",
+        "type": "fargate",
+        "buildType": "nixpacks",
+        "basePath": "./",
+        "healthCheckPath": "/",
+        "installCommand": "npm ci",
+        "buildCommand": "npm run build",
+        "startCommand": "npm start"
+      }
+    ]
+  }
+  
