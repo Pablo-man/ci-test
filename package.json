@@ -9,7 +9,7 @@
     "start": "node app.js",
     "test": "jest",
     "eslint": "eslint .",
-    "build": "CI=false webpack --mode production",
+    "build": "NIXPACKS_NODE_VERSION=16 webpack --mode production",
     "test:e2e": "npx cypress run"
   },
   "repository": {
