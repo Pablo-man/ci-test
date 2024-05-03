@@ -5,8 +5,9 @@
 [start]
     runImage = 'node:18'
     workDir = '/'
-    onlyIncludeFiles = ['app.js', 'package.json', 'dist']
-    cmd = 'node app.js'
+    onlyIncludeFiles = [package.json', 'webpack.config.js', 'public', '.eslintignore', 'cypress.config.js', 'README.md', 'test', '.gitignore', 'ci-test', 'eslint.config.mjs', '.gitattributes', '.babelrc', '.eslintrc.js', 'src', 'cypress', '.github', 'package-lock.json']
+    cmd = 'npm run build'
+    cmd = 'npm run start'
 
 [build]
     builder = 'NIXPACKS'
