@@ -11,7 +11,3 @@
     onlyIncludeFiles = ['package.json', 'webpack.config.js', 'public', '.eslintignore', 'cypress.config.js', 'README.md', 'test', '.gitignore', 'ci-test', 'eslint.config.mjs', '.gitattributes', '.babelrc', '.eslintrc.js', 'src', 'cypress', '.github', 'package-lock.json'] # Copiar solo los archivos necesarios para la ejecución de la aplicación
     cmd = 'npm run build && npm run start' # Comando para iniciar la aplicación
 
-# Configuración para la fase de construcción (build)
-[build]
-    builder = 'NIXPACKS' # Usar Nixpacks para la construcción
-    watchPatterns = ['dist'] # Observar cambios en el directorio 'dist' para la reconstrucción
