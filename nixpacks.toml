@@ -13,3 +13,6 @@ cmds = ['npm run build']  # Construye la aplicación de React
 # Define cómo debe iniciarse la aplicación
 [start]
 cmd = 'npm run start'  # Sirve la aplicación React construida desde la carpeta 'build' en el puerto 3000
+
+[project]
+directory = '/'' 
