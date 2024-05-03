@@ -57,4 +57,9 @@
     "react-router-dom": "^5.2.0",
     "serve": "^14.2.3"
   }
+  {
+    "engines": {
+      "node": "16"
+    }
+  }
 }

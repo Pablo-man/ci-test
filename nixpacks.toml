@@ -2,7 +2,7 @@
 
 # Especifica las fases del proceso de construcción
 [phases.setup]
-nixPkgs = ['nodejs_16']  # Instala Node.js y Yarn
+nixPkgs = ['nodejs']  # Instala Node.js y Yarn
 
 [phases.install]
 cmds = ['npm install']  # Instala las dependencias del proyecto usando Yarn
