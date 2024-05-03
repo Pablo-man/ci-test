@@ -56,10 +56,8 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "serve": "^14.2.3"
-  }
-  {
-    "engines": {
-      "node": "16"
-    }
+  },
+  "engines": {
+    "node": "16"
   }
 }
