@@ -5,9 +5,10 @@
     NPM_CONFIG_UPDATE_NOTIFIER = 'false' # Deshabilitar las notificaciones de actualización de NPM
     NPM_CONFIG_FUND = 'false' # Deshabilitar las notificaciones de financiamiento de NPM
 
-# Configuración para la fase de inicio (start)
-[start]
+    
+# Configuración para la fase de construcción (build)
+[build]
+    builder = 'NIXPACKS' # Usar Nixpacks para la construcción
     runImage = 'node:18' # Usar la imagen de Node.js 18 como base
     onlyIncludeFiles = ['package.json', 'webpack.config.js', 'public', '.eslintignore', 'cypress.config.js', 'README.md', 'test', '.gitignore', 'ci-test', 'eslint.config.mjs', '.gitattributes', '.babelrc', '.eslintrc.js', 'src', 'cypress', '.github', 'package-lock.json'] # Copiar solo los archivos necesarios para la ejecución de la aplicación
     cmd = 'npm run build && npm run start' # Comando para iniciar la aplicación
-
