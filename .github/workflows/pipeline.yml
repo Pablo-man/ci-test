@@ -104,4 +104,4 @@ jobs:
         uses: bervProject/railway-deploy@main
         with:
           railway_token: ${{ secrets.POKE }}
-          service: "poke"
+          service: "ci-test"
