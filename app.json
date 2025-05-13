@@ -1,0 +1,45 @@
+{
+  "name": "aplicacion-node-express",
+  "description": "Una aplicación básica utilizando Node.js y Express",
+  "keywords": [
+    "node",
+    "express",
+    "javascript",
+    "api"
+  ],
+  "website": "https://mi-aplicacion.com/",
+  "repository": "https://github.com/usuario/aplicacion-node-express",
+  "logo": "https://mi-aplicacion.com/logo.png",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "npm install"
+  },
+  "env": {
+    "NODE_ENV": {
+      "description": "Entorno de ejecución para la aplicación",
+      "value": "production"
+    },
+    "PORT": {
+      "description": "Puerto en el que se ejecutará la aplicación",
+      "value": "3000"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "image": "heroku/nodejs",
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev",
+      "as": "DATABASE"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
