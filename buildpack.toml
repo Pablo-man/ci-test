@@ -1,0 +1,17 @@
+[buildpack]
+
+[phases.setup]
+nixPkgs = ['nodejs']  # Instala Node.js y Yarn
+
+[phases.install]
+cmds = ['npm install']  # Instala las dependencias del proyecto usando Yarn
+
+[phases.build]
+cmds = ['npm run build']  # Construye la aplicación de React
+
+# Define cómo debe iniciarse la aplicación
+[start]
+cmd = 'npm run start'  # Sirve la aplicación React construida desde la carpeta 'build' en el puerto 3000
+
+[project]
+directory = '/'
